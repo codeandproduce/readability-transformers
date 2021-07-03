@@ -420,11 +420,12 @@ class ReadabilityTransformer:
         feature_extractors = self.feature_extractors
         blacklist_features = self.blacklist_features
 
+
         if self.normalize:
             feature_maxes = self.feature_maxes
             feature_mins = self.feature_mins
             normalize = lambda value, max_val, min_val: (value - min_val) / (max_val - min_val)
-            denormalize = lambda value, max_val, min_val: (value * (max_val + min_val)) + min_val
+            denormalize = lambda value, max_val, min_val: (value * (max_val - min_val)) + min_val
 
         feature_dict_array = []
         for one_passage in passages:
