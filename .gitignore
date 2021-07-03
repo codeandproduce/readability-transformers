@@ -1,0 +1,6 @@
+checkpoints/*
+export_checkpoints/*
+
+
+# Was going to implement a gdrive auto download thing for the raw dataset
+# but really the CommonLit dataset is so smamll that it really shouldn't matter.
