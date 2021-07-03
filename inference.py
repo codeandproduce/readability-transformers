@@ -14,7 +14,7 @@ OUTPUT_CSV_PATH = './'
 def inference_on_dataset():
     model = ReadabilityTransformer(
         model_path="checkpoints/stash_2/twostep_fc",
-        device="cuda",
+        device="cpu",
         double=True
     )
 
